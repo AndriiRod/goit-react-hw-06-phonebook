@@ -34,6 +34,11 @@ export const Input = styled.input`
   line-height: 1.18;
 
   margin-bottom: 20px;
+
+  &:focus {
+    outline: none;
+    border-color: #3f9bfc;
+  }
 `;
 
 export const FormBtn = styled.button`
