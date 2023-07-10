@@ -5,7 +5,7 @@ const Contacts = () => {
   return (
     <>
       <FindField />
-      <ContactsList />;
+      <ContactsList />
     </>
   );
 };

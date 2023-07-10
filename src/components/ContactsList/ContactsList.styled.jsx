@@ -11,5 +11,16 @@ export const SubTitle = styled.h2`
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #c1c1c1;
+  }
 `;

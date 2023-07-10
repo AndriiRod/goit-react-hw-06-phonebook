@@ -25,15 +25,15 @@ const ContactsList = () => {
   const visibleContact = getVisibleContact();
 
   return (
-    <div>
-      {contacts.length !== 0 && (
+    <>
+      {visibleContact.length !== 0 && (
         <List>
           {visibleContact.map(({ id, name, number }) => (
             <ContactItem key={id} id={id} name={name} number={number} />
           ))}
         </List>
       )}
-    </div>
+    </>
   );
 };
 

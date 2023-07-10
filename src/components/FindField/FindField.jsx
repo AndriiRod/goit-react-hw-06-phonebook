@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { Input, Label } from './FindField.styled';
+import { Input, Label, Icon } from './FindField.styled';
 
 import { getFilter } from 'redux/filter/slice';
 import { search } from 'redux/filter/slice';
@@ -16,8 +16,13 @@ const FindField = () => {
 
   return (
     <Label>
-      Find contacts by name
-      <Input type="text" value={value} onChange={onChangeHuddler} />
+      <Icon />
+      <Input
+        placeholder="Contacts"
+        type="text"
+        value={value}
+        onChange={onChangeHuddler}
+      />
     </Label>
   );
 };

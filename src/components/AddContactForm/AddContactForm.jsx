@@ -4,8 +4,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { toast } from 'react-toastify';
 
-import { getContacts } from 'redux/contacts/slice';
-import { add } from 'redux/contacts/slice';
+import { getContacts, add } from 'redux/contacts/slice';
 
 import schema from '../../validation/schema';
 
@@ -40,7 +39,7 @@ const AddContactForm = () => {
 
   const handleSubmitForm = data => {
     const { name } = data;
-
+    console.log(contacts);
     const matches = contacts.find(item => item.name === name);
     if (matches) {
       toast.info(
