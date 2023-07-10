@@ -11,7 +11,6 @@ export const SubTitle = styled.h2`
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  height: 100%;
   overflow-y: auto;
   scrollbar-gutter: stable;
 

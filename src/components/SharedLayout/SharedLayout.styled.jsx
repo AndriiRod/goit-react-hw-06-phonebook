@@ -7,7 +7,7 @@ export const Section = styled.section`
 
   width: 400px;
   margin: 20px auto;
-  height: calc(100vh - 40px);
+  max-height: calc(100vh - 40px);
   border-radius: 16px;
   padding: 24px;
   overflow: hidden;
@@ -70,9 +70,10 @@ export const NavLinkWrap = styled(NavLink)`
 `;
 
 export const Counter = styled.p`
+  text-align: center;
   border-radius: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+  width: 30px;
+  height: 40px
   font-size: 12px;
   background-color: #f4f8fb;
 `;
