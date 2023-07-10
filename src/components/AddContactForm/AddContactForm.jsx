@@ -10,11 +10,11 @@ import schema from '../../validation/schema';
 
 import {
   Form,
-  SubTitle,
   Label,
   Input,
   FormBtn,
   ErrorMessage,
+  InputWrap,
 } from './AddContactForm.styled';
 
 const AddContactForm = () => {
@@ -47,33 +47,37 @@ const AddContactForm = () => {
       );
       return;
     }
+    toast.success('New contact added!!');
     dispatch(add(data));
     reset();
   };
 
   return (
     <Form onSubmit={handleSubmit(handleSubmitForm)}>
-      <SubTitle>Add</SubTitle>
-      <Label htmlFor={inputNameId} error={errors.name}>
-        Name
-      </Label>
-      <Input
-        id={inputNameId}
-        type="text"
-        {...register('name', { required: true })}
-        error={errors.name}
-      />
+      <InputWrap>
+        <Label htmlFor={inputNameId} error={errors.name}>
+          Name
+        </Label>
+        <Input
+          id={inputNameId}
+          type="text"
+          {...register('name', { required: true })}
+          error={errors.name}
+        />
+      </InputWrap>
       {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
 
-      <Label htmlFor={inputNumberId} error={errors.number}>
-        Number
-      </Label>
-      <Input
-        id={inputNumberId}
-        type="tel"
-        {...register('number', { required: true })}
-        error={errors.number}
-      />
+      <InputWrap>
+        <Label htmlFor={inputNumberId} error={errors.number}>
+          Number
+        </Label>
+        <Input
+          id={inputNumberId}
+          type="tel"
+          {...register('number', { required: true })}
+          error={errors.number}
+        />
+      </InputWrap>
       {errors.number && <ErrorMessage>{errors.number.message}</ErrorMessage>}
       <FormBtn type="submit">Add contact</FormBtn>
     </Form>

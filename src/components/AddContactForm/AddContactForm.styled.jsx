@@ -3,34 +3,31 @@ import styled from '@emotion/styled';
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-`;
-
-export const SubTitle = styled.h2`
-  font-size: 18px;
-  line-height: 1.16;
-  font-weight: 500;
-
-  margin-bottom: 30px;
+  margin-top: 40px;
 `;
 
 export const Label = styled.label`
-  margin-bottom: 5px;
+  position: absolute;
+  top: -6px;
+  left: 15px;
 
+  background-color: #ffffff;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.018px;
 
-  color: #000000;
+  color: rgba(0, 0, 0, 0.6);
 `;
 
 export const Input = styled.input`
-  width: 330px;
-  height: 35px;
-  padding: 5px 10px;
+  width: 100%;
+  height: 40px;
+  padding: 16px 14px;
 
-  background: #fafafa;
-  border: 1px solid #454545;
-  border-radius: 2px;
+  background-color: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.38);
+  border-radius: 8px;
 
   font-weight: 400;
   font-size: 16px;
@@ -41,14 +38,16 @@ export const Input = styled.input`
 
 export const FormBtn = styled.button`
   font-family: inherit;
-  width: 100px;
-  margin: 0 auto;
+  font-size: 14px;
+  line-height: normal;
+  font-weight: 400;
 
-  background-color: #00b2ff;
+  padding: 9px 44px;
+  background-color: #3f9bfc;
   color: #ffffff;
-  box-shadow: 0px 14px 50px rgba(0, 25, 36, 0.2);
   border: none;
-  border-radius: 2px;
+
+  border-radius: 10px;
 `;
 
 export const ErrorMessage = styled.div`
@@ -59,4 +58,8 @@ export const ErrorMessage = styled.div`
   margin-bottom: 20px;
   background-color: #f08080;
   color: #e0ffff;
+`;
+
+export const InputWrap = styled.div`
+  position: relative;
 `;
